@@ -90,8 +90,8 @@ Hello, Giljabi.
 ## 3. 카카오맵에 gpx 올리기
 ### 3.1 웹화면
 * 카카오맵을 사용하려면 javascript에 앱키를 넣어서 사용하며, jquery를 함께 사용합니다.
-* src/main/resources/static/mygpx.html
-* gpx 파일업로드를 위해 bootstr파일, 버튼을 반응형에 맞게
+* src/main/resources/static/day1/mygpx.html
+* gpx 파일업로드를 위해 bootstrap파일, 버튼을 반응형에 맞게
 ```html
 <!DOCTYPE html>
 <html lang="ko">
@@ -121,7 +121,7 @@ Hello, Giljabi.
 </html>
 ```
 
-* src/main/resources/static/js/mygpx.js mygpx.html에서 사용할 javascript를 함께 작성합니다.
+* src/main/resources/static/day1/mygpx.js mygpx.html에서 사용할 javascript를 함께 작성합니다.
 ```javascript
 
 let gMap;
@@ -168,7 +168,7 @@ $(document).ready(function () {
 });
 ```
 
-* src/main/resources/static/css/mygpx.css
+* src/main/resources/static/day1/mygpx.css
 ```css
 html, body {
     height: 100%; /* 부모 요소의 높이를 명시적으로 설정 */
@@ -185,7 +185,4 @@ html, body {
 
 ![img.png](docs/images/day1/2-kakao-mygpx.png)
 
-
 ### 3.2 gpx 오브젝트
-* https://www.topografix.com/GPX/1/1/
-
