@@ -74,7 +74,7 @@ Hello, Giljabi.
 ### 2.2 앱 키 
 * 앱선택 후 왼쪽에 "앱 키"를 보면 키가 생성되어 있음을 볼 수 있습니다. 웹에서 사용하는 것은 "JavaScript키"입니다.
 
-* ![img.png](docs/images/day1/2-kakao-appkey.png)
+![img.png](docs/images/day1/2-kakao-appkey.png)
 
 
 ### 2.3 플랫폼 등록
