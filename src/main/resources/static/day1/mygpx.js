@@ -24,14 +24,12 @@ function clickGpxLoadButton() {
         const reader = new FileReader();
         reader.onload = function (event) {
             const fileContent = event.target.result;
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(fileContent, "application/xml");
-            const waypoints = xmlDoc.getElementsByTagName("wpt");
-            const trkseg = xmlDoc.getElementsByTagName("trkseg");
-            const trkpt = xmlDoc.getElementsByTagName("trkpt");
+            let readXmlfile = $($.parseXML(fileContent.replace(/&/g, '&amp;')));
+            const waypoints = readXmlfile.find('wpt');
+            const trkseg = readXmlfile.find('trkseg');
+            const trkpt = readXmlfile.find('trkpt');
 
-            $('#gpxOutput').text(`waypoint:${waypoints.length}, 
-            trkseg:${trkseg.length}, trkpt:${trkpt.length}`);
+            $('#gpxOutput').text(`waypoint:${waypoints.length}, trkseg:${trkseg.length}, trkpt:${trkpt.length}`);
         };
         reader.readAsText(file);
     });
